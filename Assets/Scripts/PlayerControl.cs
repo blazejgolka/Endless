@@ -27,7 +27,11 @@ public class PlayerControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        //HIT the face chek
+         if (mojRigidbody.velocity.x <0.0f)
+        {
+            GameOver();
+        }
     }
 
 
@@ -91,5 +95,11 @@ public class PlayerControl : MonoBehaviour
 
 
         }
+    }
+
+
+    void GameOver ()
+    {
+        Debug.LogFormat("{0} gAME oVER", "tERAZ");
     }
 }
